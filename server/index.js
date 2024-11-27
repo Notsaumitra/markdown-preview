@@ -5,8 +5,12 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 
+const { postMarkdown } = require('./controllers/mardown-controller')
 
-app.use("/api", require("../routes/mardownRoute"));
+
+// app.use("/api", require("./routes/mardownRoute"));
+
+app.post("/api/markdown", postMarkdown);
 
 const PORT = process.env.PORT || 3008;
 
