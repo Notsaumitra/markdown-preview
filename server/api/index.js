@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 
 
-app.use("/api", require("./routes/mardownRoute"));
+app.use("/api", require("../routes/mardownRoute"));
 
 const PORT = process.env.PORT || 3008;
 
